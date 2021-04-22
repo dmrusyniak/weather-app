@@ -1,0 +1,209 @@
+.App {
+  width: 100vw;
+  a {
+    text-decoration: none;
+  }
+}
+
+.Nav {
+  width: 100%;
+  height: 60px;
+  border-bottom: 2px #f2f2f2 solid;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  h1 {
+    padding: 0;
+    margin: 0;
+    line-height: 1;
+    color: rgb(25, 106, 133);
+  }
+}
+
+.Intro {
+  width: 50%;
+  max-width: 600px;
+  min-width: 320px;
+  text-align: center;
+  margin: 70px auto 40px;
+  font-size: 20px;
+  line-height: 1.3;
+}
+
+.Search {
+  text-align: center;
+}
+
+.Tab-Nav {
+  width: 90vw;
+  height: 60px;
+  margin: 10px auto 0 auto;
+  border: 1px solid grey;
+  border-bottom: 0px;
+  text-align: center;
+  display: flex;
+  flex-direction: row;
+  a {
+    width: 100%;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    border-bottom: 1px solid grey;
+  }
+  a:nth-child(2) {
+    border-left: 1px solid grey;
+    border-right: 1px solid grey;
+  }
+}
+
+.View-Wrap {
+  width: 90vw;
+  min-height: 200px;
+  margin: 0 auto 60px auto;
+  border-right: 1px solid grey;
+  border-left: 1px solid grey;
+  border-bottom: 1px solid grey;
+  text-align: center;
+}
+
+.Loading-wrap {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-top: 30px;
+
+  .Spinner {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  h4 {
+    text-align: center;
+    padding: 0;
+    margin: 0 auto 4px;
+  }
+
+  img {
+    margin: 0 auto;
+    height: 40px;
+    width: 40px;
+    animation-name: spin;
+    animation-duration: 3000ms;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+  }
+}
+
+.Day-Basics {
+  width: 80%;
+  padding-top: 30px;
+  padding-bottom: 30px;
+  margin: 0 auto;
+  .Flex {
+    display: flex;
+    flex-direction: row;
+  }
+  h3 {
+    text-align: center;
+    h3 {
+      text-align: center;
+      margin: 0 0 10px 0;
+    }
+  }
+
+  h5 {
+    margin: 0;
+  }
+  div {
+    width: 100%;
+  }
+  p {
+    margin: 0;
+    padding-top: 4px;
+  }
+}
+
+.Hourly {
+  width: 100%;
+  padding-top: 30px;
+  margin: 0 auto;
+  h3 {
+    text-align: center;
+    margin: 0 0 10px 0;
+  }
+}
+
+.Hourly-Headers {
+  margin: 0 auto 10px auto;
+}
+
+.Temp-Flex {
+  display: flex;
+  flex-direction: row;
+  width: auto;
+  font-variant-numeric: tabular-nums;
+  margin: 5px auto;
+  h5 {
+    margin: 0;
+  }
+  .Time {
+    width: 47.5%;
+    text-align: right;
+  }
+  .Temp {
+    width: 15%;
+    text-align: center;
+  }
+  .Forecast {
+    width: 47.5%;
+    text-align: left;
+  }
+}
+
+.Location-Flex {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 30px;
+  h3 {
+    margin: 0 12px 0 0;
+  }
+
+  .Favorite-On {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background-color: lightgreen;
+  }
+  .Favorite-Off {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background-color: lightsalmon;
+  }
+}
+
+.Fav-Wrapper {
+  .Fav {
+    margin: 5px auto;
+    cursor: pointer;
+  }
+}
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.material-icons {
+  cursor: pointer;
+}
