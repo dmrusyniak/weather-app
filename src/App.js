@@ -120,17 +120,22 @@ function App() {
     setFavorite(true);
     setLoading(true);
     setView('day');
-    const location = await geoCode(query);
-    const stationURL = await fetchStation(location);
-    const weekStationURL = await fetchStation(location, true);
-    const forecast = await fetchForecast(stationURL);
-    const weekForecast = await fetchForecast(weekStationURL);
-    if (forecast) {
-      setPeriods(forecast.properties.periods);
+    try {
+      const location = await geoCode(query);
+      const stationURL = await fetchStation(location);
+      const weekStationURL = await fetchStation(location, true);
+      const forecast = await fetchForecast(stationURL);
+      const weekForecast = await fetchForecast(weekStationURL);
+      if (forecast) {
+        setPeriods(forecast.properties.periods);
+      }
+      setWeekData(weekForecast.properties.periods);
+    
+    } catch (error) {
+      console.log(error);
     }
-    setWeekData(weekForecast.properties.periods);
     setLoading(false);
-    setQuery('');
+      setQuery('');
   }
 
   async function submitQueryFavorite(loc) {
